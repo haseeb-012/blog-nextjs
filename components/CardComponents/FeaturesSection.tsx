@@ -4,7 +4,7 @@ function FeaturesSection() {
   return (
     <div>
       <div className="text-md grid grid-cols-1 gap-x-6 gap-y-2 md:grid-cols-2">
-        <ul className="lex gap-2 space-y-1">
+        <ul className="lex gap-2 space-y-5">
           <li className="flex gap-2">
             <VerifiedIcon /> Reduces snoring from the very first night
           </li>

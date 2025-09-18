@@ -12,12 +12,12 @@ function CardSection() {
         <OffSection />
       </div>
 
-      <div className="flex gap-4 p-5 mt-8 border">
-        <div className=" mb-8 ml-22 flex border w-[22rem] flex-col bg-red-50">
+      <div className="mt-8 mb-8 gap-4 border p-5 md:flex">
+        <div className="mx-auto flex w-[22rem] flex-col border bg-red-50 md:ml-22">
           <Image
             src={"/product1.png"}
             alt="Sleep Tape"
-            className=""
+            className="object-cover md:h-[484px] md:w-[300px]"
             width={300}
             height={484}
           />
