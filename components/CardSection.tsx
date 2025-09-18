@@ -1,48 +1,45 @@
-import Image from 'next/image';
-import Banner from './CardComponents/Banner';
-import FeaturesSection from './CardComponents/FeaturesSection';
-import OffSection from './CardComponents/OffSection';
-import OverallScore from './CardComponents/OverallScore';
-import Stars from './CardComponents/Stars';
+import Image from "next/image";
+import Banner from "./CardComponents/Banner";
+import FeaturesSection from "./CardComponents/FeaturesSection";
+import OffSection from "./CardComponents/OffSection";
+import OverallScore from "./CardComponents/OverallScore";
+import Stars from "./CardComponents/Stars";
 function CardSection() {
-	return (
-		<div
-			className="bg-neutral-50 
-		rounded-2xl  
-		 shadow-xl/30 max-w-8xl pt-8  mx-14 mt-5 "
-		>
-			<div className="flex justify-between  items-start">
-				<Banner text="#1 Mouth Tape" bgColor="blue-500" />
-				<OffSection />
-			</div>
-			<div className="grid md:grid-cols-2">
-				<div className="flex flex-col bg-red-50  w-[22rem] mb-8 mt-7 ml-22">
-					<Image
-						src={'/product1.png'}
-						alt="Sleep Tape"
-						className=""
-						width={300}
-						height={484}
-					/>
-					{/* Stars */}
-					<div className="hidden md:block">
-						<Stars />
-					</div>
-					<div className="hidden md:block text-lg text-gray-600 mb-2">
-						5,000+ USERS GAVE THIS BRAND 5 STARS
-					</div>
-					{/* Score */}
-					<OverallScore />
-				</div>
+  return (
+    <div className="max-w-8xl mx-14 mt-5 rounded-2xl bg-neutral-50 pt-8 shadow-xl/30">
+      <div className="flex items-start justify-between">
+        <Banner text="#1 Mouth Tape" bgColor="blue-500" />
+        <OffSection />
+      </div>
 
-				{/* right section */}
-				<div className="flex flex-col gap-2">
-					{/* Features */}
-					<FeaturesSection />
-				</div>
-			</div>
-		</div>
-	);
+      <div className="flex gap-4 p-5 mt-8 border">
+        <div className=" mb-8 ml-22 flex border w-[22rem] flex-col bg-red-50">
+          <Image
+            src={"/product1.png"}
+            alt="Sleep Tape"
+            className=""
+            width={300}
+            height={484}
+          />
+          {/* Stars */}
+          <div className="hidden md:block">
+            <Stars />
+          </div>
+          <div className="mb-2 hidden text-lg text-gray-600 md:block">
+            5,000+ USERS GAVE THIS BRAND 5 STARS
+          </div>
+          {/* Score */}
+          <OverallScore />
+        </div>
+
+        {/* right section */}
+        <div className="flex flex-col gap-2 border">
+          {/* Features */}
+          <FeaturesSection />
+        </div>
+      </div>
+    </div>
+  );
 }
 
 export default CardSection;

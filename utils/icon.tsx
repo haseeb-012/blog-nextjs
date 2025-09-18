@@ -14,6 +14,7 @@ function VerifiedIcon() {
 				stroke-width="2"
 				stroke-linecap="round"
 				stroke-linejoin="round"
+				style={{ color: 'green' }}
 				className="lucide lucide-badge-check-icon lucide-badge-check"
 			>
 				<path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z" />
@@ -37,6 +38,7 @@ function UnverifiedIcon() {
 				strokeLinecap="round"
 				strokeLinejoin="round"
 				className="lucide lucide-badge-x-icon lucide-badge-x"
+				style={{ color: 'red' }}
 			>
 				<path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z" />
 				<line x1="15" x2="9" y1="9" y2="15" />

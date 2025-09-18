@@ -1,9 +1,7 @@
-import React from 'react'
-
 function Navabar() {
   return (
-		<div className="bg-[#FFFFFF] w-full h-[152px] flex justify-space-between"></div>
-	);
+    <div className="justify-space-between flex h-[152px] w-full bg-[#FFFFFF]"></div>
+  );
 }
 
-export default Navabar
+export default Navabar;
