@@ -2,6 +2,7 @@ import Image from 'next/image';
 import Banner from './Banner';
 import OffSection from './OffSection';
 import Stars from './Stars';
+import OverallScore from './OverallScore';
 function CardSection() {
 	return (
 		<div
@@ -23,15 +24,14 @@ function CardSection() {
 						height={484}
 					/>
 					{/* Stars */}
-					<div className='hidden md:block'>
+					<div className="hidden md:block">
 						<Stars />
 					</div>
-
 					<div className="hidden md:block text-lg text-gray-600 mb-2">
 						5,000+ USERS GAVE THIS BRAND 5 STARS
 					</div>
 					{/* Score */}
-					
+					<OverallScore />
 				</div>
 
 				{/* right section */}
@@ -69,6 +69,9 @@ function CardSection() {
 }
 
 export default CardSection;
+
+
+
 
 
 
