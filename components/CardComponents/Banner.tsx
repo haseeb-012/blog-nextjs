@@ -1,7 +1,7 @@
-function Banner({ bgColor, text }: { bgColor?: string; text?: string }) {
+function Banner({bgColor, text }: { bgColor?: string; text?: string }) {
 	return (
 		<div className="relative inline-block h-[69px] w-[280px]">
-			<div className={`bg-${bgColor}-700 text-white text-2xl font-bold px-5  py-5 `}>
+			<div className={`bg-${bgColor} text-white text-2xl font-bold px-5  py-5 `}>
 				{text}
 			</div>
 
