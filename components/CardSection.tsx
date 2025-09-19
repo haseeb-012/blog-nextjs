@@ -1,15 +1,13 @@
 import Image from "next/image";
 import Banner from "./CardComponents/Banner";
 import FeaturesSection from "./CardComponents/FeaturesSection";
-import OffSection from "./CardComponents/OffSection";
 import OverallScore from "./CardComponents/OverallScore";
 import Stars from "./CardComponents/Stars";
 function CardSection() {
   return (
     <div className="max-w-8xl mx-14 mt-5 rounded-2xl bg-neutral-50 pt-8 shadow-xl/30">
       <div className="flex items-start justify-between">
-        <Banner text="#1 Mouth Tape" bgColor="blue-500" />
-        <OffSection />
+        <Banner text="#1 Mouth Tape" bgColor="bg-blue-500" />
       </div>
 
       <div className="mt-8 mb-8 gap-4 border p-5 md:flex">
@@ -17,9 +15,9 @@ function CardSection() {
           <Image
             src={"/product1.png"}
             alt="Sleep Tape"
-            className="object-cover md:h-[484px] md:w-[300px]"
-            width={300}
-            height={484}
+            className=""
+            width={200}
+            height={400}
           />
           {/* Stars */}
           <div className="hidden md:block">
