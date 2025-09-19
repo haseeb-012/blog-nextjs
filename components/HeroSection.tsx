@@ -5,7 +5,7 @@ function HeroSection() {
       <div className="absolute inset-0 bg-black/60"></div>
 
       {/* Content */}
-      <div className="relative z-10 flex w-full max-w-4xl flex-col items-center gap-4 px-4 py-16 md:py-24">
+      <div className="relative z-10 flex w-full max-w-6xl flex-col items-center gap-4 px-4 py-16 md:py-24">
         {/* Main Heading */}
         <h1 className="text-center text-2xl leading-tight font-bold md:text-4xl lg:text-5xl">
           2025's Top Rated Mouth Tape: The Doctor-Formulated Ritual That Helps
