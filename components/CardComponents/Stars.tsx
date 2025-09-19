@@ -1,11 +1,11 @@
-function Stars() {
+function Stars({size}: {size?: number}) {
   return (
-    <div className="mt-6 flex items-center gap-2 pl-14">
+    <div className="sm::mt-6 flex items-center gap-2 pl-22 sm:pl-14">
       {Array.from({ length: 5 }).map((_, idx) => (
         <svg
           key={idx}
-          width="32"
-          height="32"
+          width={size || 32}
+          height={size || 32}
           fill="#FFD700"
           viewBox="0 0 28 28"
         >
