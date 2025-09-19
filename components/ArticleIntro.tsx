@@ -1,7 +1,7 @@
 function ArticleIntro() {
   return (
     <div className="bg-white py-8 md:py-12">
-      <div className="mx-auto max-w-6xl px-4 md:px-6">
+      <div className="mx-auto max-w-7xl px-4 md:px-0">
         {/* Article Content */}
         <div className="prose prose-lg max-w-none">
           <div className="space-y-6 leading-relaxed text-gray-800">

@@ -18,7 +18,7 @@ function HeroSection() {
         </p>
 
         {/* Expert Approved Box */}
-        <div className="mt-4 rounded-lg border border-gray-400 bg-black/40 px-6 py-4 backdrop-blur-sm md:px-8 md:py-6">
+        <div className="mt-4  border border-gray-400 bg-black/40 px-6 py-4 backdrop-blur-sm md:px-8 md:py-6">
           <p className="mb-2 text-center text-sm font-semibold md:text-base">
             Expert-Approved
           </p>
