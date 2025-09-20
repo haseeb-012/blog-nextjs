@@ -1,3 +1,5 @@
+import { VerifiedIcon } from "@/utils/icon";
+
 function ReviewStatistics() {
   const statistics = [
     {
@@ -24,19 +26,7 @@ function ReviewStatistics() {
     {
       icon: (
         <div className="flex h-10 w-10 items-center justify-center rounded-full bg-white md:h-12 md:w-12">
-          <svg
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            className="h-5 w-5 md:h-6 md:w-6"
-          >
-            <path
-              d="M9 16.17L4.83 12L3.41 13.41L9 19L21 7L19.59 5.59L9 16.17Z"
-              fill="#6B7280"
-            />
-          </svg>
+          <VerifiedIcon color="black" />
         </div>
       ),
       number: "50,000+",
@@ -66,8 +56,8 @@ function ReviewStatistics() {
   ];
 
   return (
-    <div className="w-full bg-gray-900 py-8 md:py-12">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div className="w-full bg-gray-800 ">
+      <div className="mx-auto max-w-8xl px-4  sm:px-6 xl:px-0">
         {/* Mobile Layout - Vertical Stack */}
         <div className="block md:hidden">
           <div className="space-y-4">
@@ -92,11 +82,11 @@ function ReviewStatistics() {
 
         {/* Desktop/Tablet Layout - Horizontal */}
         <div className="hidden md:block">
-          <div className="grid grid-cols-3 gap-6 lg:gap-8">
+          <div className="grid grid-cols-3 gap-6 xl:gap-0">
             {statistics.map((stat, index) => (
               <div
                 key={index}
-                className="hover:bg-gray-750 flex items-center gap-4 rounded-lg bg-gray-800 p-6 transition-all"
+                className="hover:bg-gray-750 flex items-center gap-4  bg-gray-800 p-6 transition-all"
               >
                 <div className="flex-shrink-0">{stat.icon}</div>
                 <div className="flex flex-col">
