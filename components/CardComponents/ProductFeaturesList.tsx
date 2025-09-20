@@ -1,4 +1,4 @@
-import { UnverifiedIcon, VerifiedIcon } from "@/utils/icon";
+import { NonVerifiedIcon, VerifiedIcon } from "@/utils/icon";
 
 function ProductFeaturesList() {
   return (
@@ -78,7 +78,7 @@ function ProductFeaturesList() {
           </span>
         </div>
         <div className="flex items-start gap-2">
-          <UnverifiedIcon />
+          <NonVerifiedIcon />
           <span className="text-sm">
             High demand — limited stock often sells out
           </span>
@@ -168,7 +168,7 @@ function ProductFeaturesList() {
             </span>
           </div>
           <div className="flex items-start gap-2">
-            <UnverifiedIcon />
+            <NonVerifiedIcon />
             <span className="text-sm lg:text-base">
               High demand — limited stock often sells out
             </span>

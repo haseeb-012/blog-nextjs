@@ -32,8 +32,8 @@ function ProductCard() {
               <Image
                 src="/product1.png"
                 alt="Sleep Tape"
-                width={320}
-                height={320}
+                width={300}
+                height={300}
                 className="mx-auto mb-6 w-full max-w-sm"
               />
 
@@ -54,7 +54,7 @@ function ProductCard() {
 
             {/* Purchase Section */}
             <div className="mt-8 flex items-center justify-between">
-              <button className="rounded bg-green-500 px-8 py-3 text-lg font-semibold text-white transition-colors hover:bg-green-600">
+              <button className="Sbg-green-500 px-8 py-3 text-lg font-semibold text-white transition-colors hover:bg-green-600">
                 VISIT SITE
               </button>
 

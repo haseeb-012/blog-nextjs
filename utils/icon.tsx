@@ -24,7 +24,7 @@ function VerifiedIcon({color}: {color?: string}) {
 	);
 }
 
-function UnverifiedIcon() {
+function NonVerifiedIcon() {
 	return (
 		<div>
 			<svg
@@ -48,4 +48,4 @@ function UnverifiedIcon() {
 	);
 }
 
-export { VerifiedIcon, UnverifiedIcon };
+export { VerifiedIcon, NonVerifiedIcon };

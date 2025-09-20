@@ -1,3 +1,4 @@
+import { NonVerifiedIcon, VerifiedIcon } from "@/utils/icon";
 import Image from "next/image";
 import Banner from "./RankingBanner";
 
@@ -26,7 +27,7 @@ function Card({
   shipping,
 }: ProductCardProps) {
   return (
-    <div className="mx-auto w-full max-w-7xl overflow-hidden rounded-lg border border-gray-200 bg-white shadow-lg">
+    <div className="mx-auto w-full max-w-7xl overflow-hidden border border-gray-200 bg-white">
       {/* Mobile Layout */}
       <div className="block md:hidden">
         {/* Rank Banner */}
@@ -52,21 +53,35 @@ function Card({
           <div className="space-y-2">
             {features.map((feature, idx) => (
               <div key={idx} className="flex items-start space-x-2">
-                <span
-                  className={`flex-shrink-0 text-lg ${
-                    feature.isPositive ? "text-green-500" : "text-red-500"
-                  }`}
-                >
-                  {feature.isPositive ? "✓" : "✗"}
-                </span>
-                <span className="text-sm leading-relaxed text-gray-700">
+                <div className="mt-0.5 flex-shrink-0">
+                  {feature.isPositive ? <VerifiedIcon /> : <NonVerifiedIcon />}
+                </div>
+                <span className="text-xs leading-relaxed text-gray-700">
                   {feature.text}
                 </span>
               </div>
             ))}
           </div>
 
-          {/* Rating and Score */}
+          {/* Visit Amazon Button - Right after features */}
+          <div className="space-y-2">
+            <button className="w-full rounded-md bg-green-500 px-6 py-3 text-sm font-bold text-white transition-colors duration-200 hover:bg-green-600">
+              VISIT AMAZON
+            </button>
+            <div className="text-center text-xs text-gray-500">{shipping}</div>
+          </div>
+
+          {/* Overall Score */}
+          <div className="text-center">
+            <div className="text-sm font-medium text-gray-600">
+              Overall Score:{" "}
+              <span className="text-2xl font-bold text-gray-800">
+                {overallScore}
+              </span>
+            </div>
+          </div>
+
+          {/* Rating */}
           <div className="space-y-2 text-center">
             <div className="flex items-center justify-center space-x-1">
               {Array.from({ length: 5 }).map((_, idx) => (
@@ -84,53 +99,37 @@ function Card({
             <div className="text-xs font-medium text-gray-600">
               {reviewCount}
             </div>
-            <div className="text-sm font-medium text-gray-600">
-              Overall Score:{" "}
-              <span className="text-2xl font-bold text-gray-800">
-                {overallScore}
-              </span>
-            </div>
-          </div>
-
-          {/* Button and Shipping */}
-          <div className="space-y-2">
-            <button className="w-full rounded-md bg-green-500 px-6 py-3 text-sm font-bold text-white transition-colors duration-200 hover:bg-green-600">
-              VISIT AMAZON
-            </button>
-            <div className="text-center text-xs text-gray-500">{shipping}</div>
           </div>
         </div>
       </div>
 
       {/* Desktop Layout */}
       <div className="hidden md:block">
-        <div className="flex items-start">
+        <div className="flex items-start justify-between p-4">
           {/* Rank Banner */}
           <div className="relative">
             <Banner text={rank} bgColor="bg-gray-800" />
           </div>
 
           {/* Overall Score - Top Right */}
-          <div className="ml-auto p-4">
-            <div className="text-right">
-              <div className="text-sm font-medium text-gray-600">
-                Overall Score:
-              </div>
-              <div className="text-4xl font-bold text-gray-800">
-                {overallScore}
-              </div>
+          <div className="text-right">
+            <div className="text-sm font-medium text-gray-600">
+              Overall Score:
+            </div>
+            <div className="text-3xl font-bold text-gray-800">
+              {overallScore}
             </div>
           </div>
         </div>
 
-        <div className="grid grid-cols-[200px_1fr] gap-8 p-6">
-          {/* Left Section - Product Image and Actions */}
-          <div className="flex flex-col items-center space-y-4">
+        <div className="grid grid-cols-[200px_1fr] gap-6 p-6">
+          {/* Left Section - Product Image */}
+          <div className="flex flex-col items-center space-y-3">
             <Image
               src={productImage || "/Product3.png"}
               alt="Product"
-              width={160}
-              height={192}
+              width={150}
+              height={180}
               className="rounded-lg object-contain"
               style={{ width: "auto", height: "auto" }}
               unoptimized
@@ -141,8 +140,8 @@ function Card({
               {Array.from({ length: 5 }).map((_, idx) => (
                 <svg
                   key={idx}
-                  width="20"
-                  height="20"
+                  width="18"
+                  height="18"
                   fill={idx < rating ? "#FFD700" : "#E5E7EB"}
                   viewBox="0 0 24 24"
                 >
@@ -152,36 +151,37 @@ function Card({
             </div>
 
             {/* Review Count */}
-            <div className="text-center text-sm font-medium text-gray-600">
+            <div className="text-center text-xs font-medium text-gray-600">
               {reviewCount}
             </div>
-
-            {/* Visit Amazon Button */}
-            <button className="rounded-md bg-green-500 px-8 py-3 text-base font-bold text-white transition-colors duration-200 hover:bg-green-600">
-              VISIT AMAZON
-            </button>
-
-            {/* Shipping Info */}
-            <div className="text-center text-sm text-gray-500">{shipping}</div>
           </div>
 
-          {/* Right Section - Features */}
-          <div className="flex flex-col justify-center">
-            <div className="grid grid-cols-1 gap-3 text-base">
+          {/* Right Section - Features + Button at bottom */}
+          <div className="flex min-h-[300px] flex-col justify-between">
+            {/* Features - Takes available space */}
+            <div className="space-y-3">
               {features.map((feature, idx) => (
                 <div key={idx} className="flex items-start space-x-3">
-                  <span
-                    className={`flex-shrink-0 text-xl ${
-                      feature.isPositive ? "text-green-500" : "text-red-500"
-                    }`}
-                  >
-                    {feature.isPositive ? "✓" : "✗"}
-                  </span>
-                  <span className="leading-relaxed text-gray-700">
+                  <div className="mt-0.5 flex-shrink-0">
+                    {feature.isPositive ? (
+                      <VerifiedIcon />
+                    ) : (
+                      <NonVerifiedIcon />
+                    )}
+                  </div>
+                  <span className="text-sm leading-relaxed text-gray-700">
                     {feature.text}
                   </span>
                 </div>
               ))}
+            </div>
+
+            {/* Button and Shipping - Fixed at bottom */}
+            <div className="mt-6 flex items-center justify-between">
+              <button className="rounded-md bg-green-500 px-8 py-3 text-sm font-bold text-white transition-colors duration-200 hover:bg-green-600">
+                VISIT AMAZON
+              </button>
+              <div className="text-sm text-gray-500">{shipping}</div>
             </div>
           </div>
         </div>

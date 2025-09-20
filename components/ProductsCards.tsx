@@ -3,7 +3,7 @@ import Card from "./CardComponents/Card";
 const productsData = [
   {
     rank: "#2 Mouth Tape",
-    productImage: "/Product3.png",
+    productImage: "/product2.png",
     features: [
       { text: "Breathable woven fabric with flexibility", isPositive: true },
       { text: "Comfortable fit during use", isPositive: true },
@@ -22,7 +22,7 @@ const productsData = [
   },
   {
     rank: "#3 Mouth Tape",
-    productImage: "/product1.png",
+    productImage: "/product3.png",
     features: [
       { text: "Lightweight, breathable material", isPositive: true },
       { text: "Fits most mouth shapes with ease", isPositive: true },
@@ -42,7 +42,7 @@ const productsData = [
   },
   {
     rank: "#4 Mouth Tape",
-    productImage: "/Product3.png",
+    productImage: "/product4.png",
     features: [
       { text: "Can be worn horizontally or vertically", isPositive: true },
       {
@@ -71,7 +71,7 @@ const productsData = [
   },
   {
     rank: "#5 Mouth Tape",
-    productImage: "/Product3.png",
+    productImage: "/product5.png",
     features: [
       { text: "Easy to apply and remove", isPositive: true },
       { text: "Comfortable once in place", isPositive: true },
@@ -88,7 +88,7 @@ const productsData = [
 
 function ProductsCards() {
   return (
-    <div className="w-full bg-gray-50 py-8">
+    <div className="w-full rounded-lg bg-gray-50 py-8 shadow-lg">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="space-y-8">
           {productsData.map((product, index) => (
