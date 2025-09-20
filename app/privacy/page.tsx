@@ -1,3 +1,5 @@
+import Footer from "@/components/Footer";
+
 export default function PrivacyPolicyPage() {
   return (
     <div className="min-h-screen bg-white">
@@ -255,7 +257,13 @@ export default function PrivacyPolicyPage() {
               </p>
             </div>
           </section>
+
         </div>
+      </div>
+
+      {/* Footer */}
+      <div className="mt-auto">
+        <Footer />
       </div>
     </div>
   );

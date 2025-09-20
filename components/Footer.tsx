@@ -3,7 +3,7 @@ import React from 'react'
 
 function Footer() {
   return (
-    <footer className="border-t border-gray-200 bg-white px-4 py-6">
+    <footer className="border-t border-gray-200 bg-[#E9E9E9] px-4 py-6">
       <div className="mx-auto max-w-6xl">
         <div className="flex flex-col items-center justify-between space-y-4 md:flex-row md:space-y-0">
           <div className="text-sm text-gray-500">

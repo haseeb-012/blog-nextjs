@@ -1,3 +1,5 @@
+import Footer from "@/components/Footer";
+
 export default function TermsOfUsePage() {
   return (
     <div className="min-h-screen bg-white">
@@ -426,6 +428,9 @@ export default function TermsOfUsePage() {
           </section>
         </div>
       </div>
+
+      {/* Footer */}
+      <Footer />
     </div>
   );
 }

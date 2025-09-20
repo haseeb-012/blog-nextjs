@@ -1,5 +1,5 @@
 import ContactForm from "@/components/ContactForm";
-import Link from "next/link";
+import Footer from "@/components/Footer";
 
 export default function ContactPage() {
   return (
@@ -20,7 +20,7 @@ export default function ContactPage() {
         <div className="mx-auto max-w-4xl">
           <div className="mb-8 text-center">
             <p className="text-sm leading-relaxed text-gray-600 md:text-base">
-              We'd love to hear from you! Whether you have questions, requests
+              We&apos;d love to hear from you! Whether you have questions, requests
               for product reviews, or need specific information, feel free to
               reach out—your feedback helps us grow.
             </p>
@@ -31,7 +31,7 @@ export default function ContactPage() {
       </div>
 
       {/* Footer */}
-     
+      <Footer />
     </div>
   );
 }

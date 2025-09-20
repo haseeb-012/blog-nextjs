@@ -1,7 +1,8 @@
+import Footer from "@/components/Footer";
+
 export default function AboutPage() {
   return (
     <div className="min-h-screen bg-white">
-      {/* Header */}
 
       {/* Hero Section */}
       <div className="relative flex h-[250px] items-center justify-center bg-[url('/bg.jpg')] bg-cover bg-center bg-no-repeat md:h-[350px]">
@@ -28,12 +29,12 @@ export default function AboutPage() {
               <p>
                 At The Tested List, we understand how overwhelming the online
                 marketplace can feel — especially when every product claims to
-                be "the best" and countless reviews can't be trusted. For adults
+                be &quot;the best&quot; and countless reviews can&apos;t be trusted. For adults
                 45 and older who take their health, comfort, and money
-                seriously, that confusion isn't just frustrating — it's costly.
+                seriously, that confusion isn&apos;t just frustrating — it&apos;s costly.
               </p>
               <p>
-                That's why we created The Tested List: a platform dedicated to
+                That&apos;s why we created The Tested List: a platform dedicated to
                 real reviews, expert insights, and honest product comparisons.
                 Our goal is simple — to help you cut through the noise and make
                 confident decisions about the products that truly improve your
@@ -50,14 +51,14 @@ export default function AboutPage() {
             <div className="space-y-4 text-center text-sm leading-relaxed text-gray-600 md:text-base">
               <p>
                 Too often, online reviews are fake, misleading, or written by
-                people who haven't even used the product. That leaves shoppers
+                people who haven&apos;t even used the product. That leaves shoppers
                 guessing — and too often, disappointed. The Tested List was
                 founded to change that.
               </p>
               <p>
                 We focus on clarity, transparency, and rigorous testing so that
-                you don't waste time or money on products that don't work.
-                Whether it's a sleep aid, a wellness tool, or a household
+                you don&apos;t waste time or money on products that don&apos;t work.
+                Whether it&apos;s a sleep aid, a wellness tool, or a household
                 essential, our reviews are designed to give you the single point
                 of truth you can rely on.
               </p>
@@ -83,8 +84,10 @@ export default function AboutPage() {
               </p>
             </div>
           </section>
+
         </div>
       </div>
+          <Footer />
     </div>
   );
 }
