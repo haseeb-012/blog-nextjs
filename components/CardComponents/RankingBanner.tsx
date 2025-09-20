@@ -9,11 +9,8 @@ function Banner({ bgColor, text }: { bgColor?: string; text?: string }) {
         </div>
 
         {/* Triangle on right side */}
-
         <div className="absolute top-0 right-0 z-10 h-0 w-0 border-t-[28px] border-r-[25px] border-b-[20px] border-t-transparent border-r-white border-b-transparent sm:border-t-[32px] md:border-r-[36px] md:border-b-[38px] lg:border-t-[36px]"></div>
       </div>
-
-      
     </>
   );
 }

@@ -1,33 +1,33 @@
 function ArticleIntro() {
   return (
     <div className="bg-white py-8 md:py-12">
-      <div className="mx-auto max-w-7xl px-4 md:px-0">
+      <div className="mx-auto max-w-7xl px-4 xl:px-0">
         {/* Article Content */}
         <div className="prose prose-lg max-w-none">
           <div className="space-y-6 leading-relaxed text-gray-800">
             <p className="text-base md:text-lg">
               Still waking up with a desert-dry mouth or a partner nudging you
-              awake because you're snoring?
+              awake because you&apos;re snoring?
             </p>
 
             <p className="text-base md:text-lg">
-              It's not just annoying — it's your body warning you that you're
+              It&apos;s not just annoying — it&apos;s your body warning you that you&apos;re
               breathing wrong at night.
             </p>
 
             <p className="text-base md:text-lg">
-              The fix isn't another bulky CPAP machine, chin strap, or plastic
-              mouth guard. It's as simple as a strip of tape.
+              The fix isn&apos;t another bulky CPAP machine, chin strap, or plastic
+              mouth guard. It&apos;s as simple as a strip of tape.
             </p>
 
             <p className="text-base md:text-lg">
-              But here's the truth: not all tapes are the same. Some peel off
+              But here&apos;s the truth: not all tapes are the same. Some peel off
               halfway through the night. Some feel like duct tape on your lips.
               And others irritate sensitive, aging skin.
             </p>
 
             <p className="text-base md:text-lg">
-              That's why we put the best-selling mouth tapes through weeks of
+              That&apos;s why we put the best-selling mouth tapes through weeks of
               testing, side by side, to find out which one really delivers on
               its promises.
             </p>

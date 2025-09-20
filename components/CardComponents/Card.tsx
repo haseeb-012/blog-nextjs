@@ -15,7 +15,7 @@ interface ProductCardProps {
   shipping: string;
 }
 
-function ProductCard({
+function Card({
   rank,
   productImage,
   features,
@@ -126,4 +126,4 @@ function ProductCard({
   );
 }
 
-export default ProductCard;
+export default Card;

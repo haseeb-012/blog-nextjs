@@ -1,8 +1,9 @@
-import ProductCard from "./CardComponents/ProductCard";
+import Card from "./CardComponents/Card";
 
 const productsData = [
   {
     rank: "#1 Mouth Tape",
+    productImage: "/product3.png",
     features: [
       { text: "Breathable woven fabric with flexibility", isPositive: true },
       { text: "Comfortable fit during use", isPositive: true },
@@ -66,7 +67,7 @@ function ProductsCards() {
       <div className="mx-auto max-w-7xl">
         <div className="space-y-6">
           {productsData.map((product, index) => (
-            <ProductCard
+            <Card
               key={index}
               rank={product.rank}
               features={product.features}
