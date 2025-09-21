@@ -88,8 +88,8 @@ const productsData = [
 
 function ProductsCards() {
   return (
-    <div className="w-full rounded-lg bg-gray-50 py-8 shadow-lg">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div className="w-full rounded-xl bg-gray-50 py-8 shadow-lg">
+      <div className="mx-auto max-w-8xl sm:px-6">
         <div className="space-y-8">
           {productsData.map((product, index) => (
             <Card

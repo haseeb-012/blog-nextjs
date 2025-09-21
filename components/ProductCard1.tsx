@@ -1,16 +1,24 @@
 import Image from "next/image";
-import Banner from "./CardComponents/RankingBanner";
 import ProductFeaturesList from "./CardComponents/ProductFeaturesList";
-import ScoreDisplay from "./CardComponents/ScoreDisplay";
-import Stars from "./CardComponents/StarRanking";
+
 
 function ProductCard() {
   return (
     <div className="mx-auto w-full max-w-7xl px-4 py-8 xl:px-0">
       <div className="overflow-hidden bg-white shadow-lg">
-        {/* Header Section with Banner and Discount */}
-        <div className="flex items-start justify-between">
-          <Banner text="#1 Mouth Tape" bgColor="bg-blue-500" />
+        {/* Header Section with Approved Badge and Discount */}
+        <div className="flex items-start justify-between px-4 py-4">
+          {/* Approved Badge */}
+          <div className="relative md:pl-20">
+            <Image
+              src="/approved.png"
+              alt="Approved"
+              width={100}
+              height={100}
+              className="h-20 w-20 md:h-40 md:w-40"
+              unoptimized
+            />
+          </div>
 
           {/* Discount Banner - Hidden on mobile, visible on tablet+ */}
           <div className="hidden flex-col bg-gray-900 px-6 py-4 text-center text-white md:flex">
@@ -24,115 +32,59 @@ function ProductCard() {
           </div>
         </div>
 
-        {/* Desktop/Tablet Layout */}
-        <div className="hidden gap-8 md:flex lg:gap-12">
-          {/* Left Column - Product Image and Rating */}
-          <div className="w-80 flex-shrink-0 lg:w-96">
-            <div className="text-center">
+        {/* Main Layout - Responsive */}
+        <div className="flex flex-col gap-6 px-4 md:flex-row md:gap-8 lg:gap-12">
+          {/* Left Column - Product Image */}
+          <div className="flex-shrink-0 md:w-60 lg:w-72">
+            <div className=" text-center md:mt-10 md:ml-18">
               <Image
                 src="/product1.png"
                 alt="Sleep Tape"
-                width={300}
-                height={300}
-                className="mx-auto mb-6 w-full max-w-sm"
+                width={250}
+                height={250}
+                className="mx-auto mb-4 w-full max-w-[200px] md:mb-6 md:max-w-[200px] lg:max-w-[250px]"
+                style={{ width: "auto", height: "auto" }}
+                unoptimized
               />
-
-              <div className="mb-4">
-                <Stars />
-              </div>
-              <div className="mb-6 text-sm text-gray-600">
-                5,000+ USERS GAVE THIS BRAND 5 STARS
-              </div>
-
-              <ScoreDisplay />
             </div>
           </div>
+
+          {/* Mobile Discount Banner - Only visible on mobile */}
+          <div className="mb-6 bg-gray-900 p-4 text-center text-white md:hidden">
+            <div className="text-lg font-bold">
+              UPTO <span className="text-green-400">50%</span> OFF
+            </div>
+            <div className="mt-1 text-sm">
+              Final Day to Save{" "}
+              <span className="font-bold">Tuesday, September 16, 2025</span>
+            </div>
+          </div>
+          {/* Mobile Visit Site Button - Only visible on mobile */}
+          <button className="md:hidden w-full rounded bg-green-500 px-8 py-3 text-lg font-semibold text-white transition-colors hover:bg-green-600">
+            VISIT SITE
+          </button>
 
           {/* Right Column - Features and Purchase */}
           <div className="flex-1">
             <ProductFeaturesList />
 
             {/* Purchase Section */}
-            <div className="mt-8 flex items-center justify-between">
-              <button className="Sbg-green-500 px-8 py-3 text-lg font-semibold text-white transition-colors hover:bg-green-600">
-                VISIT SITE
-              </button>
+            <div className="mt-6 md:mt-8">
+              <div className="flex flex-col items-center space-y-4 md:flex-row md:items-center md:justify-between md:space-y-0">
+                <button className=" hidden md:flex  w-full rounded bg-green-500 px-8 py-3 text-lg font-semibold text-white transition-colors hover:bg-green-600 md:w-auto">
+                  VISIT SITE
+                </button>
 
-              <div className="text-right">
-                <div className="text-2xl font-bold text-gray-900">
-                  $24.99{" "}
-                  <span className="ml-2 text-lg text-gray-500 line-through">
-                    $29.99
-                  </span>
-                </div>
-                <div className="mt-1 text-sm text-gray-500">
-                  1-3 Days Express Shipping
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Mobile Layout */}
-        <div className="md:hidden">
-          {/* Product Image */}
-          <div className="mb-6 text-center">
-            <Image
-              src="/product1.png"
-              alt="Sleep Tape"
-              width={240}
-              height={240}
-              className="mx-auto mb-4"
-            />
-          </div>
-
-          {/* Features */}
-          <div className="mb-6">
-            <ProductFeaturesList />
-          </div>
-
-          {/* Mobile Rating */}
-          <div className="mb-6 text-center">
-            <div className="mb-2">
-              <span className="text-sm text-gray-600">Overall Score: </span>
-              <span className="text-xl font-bold text-gray-900">9.9</span>
-            </div>
-            <div className="mb-2">
-              <Stars size={20} />
-            </div>
-            <div className="text-sm text-gray-600">
-              5,000+ USERS GAVE THIS BRAND 5 STARS
-            </div>
-          </div>
-
-          {/* Main Content Area */}
-          <div className="p-6 md:p-8">
-            {/* Mobile Discount Banner */}
-            <div className="mb-6  bg-gray-900 p-4 text-center text-white md:hidden">
-              <div className="text-lg font-bold">
-                UPTO <span className="text-green-400">50%</span> OFF
-              </div>
-              <div className="mt-1 text-sm">
-                Final Day to Save{" "}
-                <span className="font-bold">Tuesday, September 16, 2025</span>
-              </div>
-            </div>
-
-            {/* Mobile Purchase Section */}
-            <div className="space-y-4">
-              <button className="w-full rounded bg-green-500 py-3 text-lg font-semibold text-white transition-colors hover:bg-green-600">
-                VISIT SITE
-              </button>
-
-              <div className="text-center">
-                <div className="text-xl font-bold text-gray-900">
-                  $24.99{" "}
-                  <span className="ml-2 text-base text-gray-500 line-through">
-                    $29.99
-                  </span>
-                </div>
-                <div className="mt-1 text-sm text-gray-500">
-                  1-3 Days Express Shipping
+                <div className="hidden md:flex text-center md:text-right">
+                  <div className="text-xl font-bold text-gray-900 md:text-2xl">
+                    $24.99{" "}
+                    <span className="ml-2 text-base text-gray-500 line-through md:text-lg">
+                      $29.99
+                    </span>
+                  </div>
+                  <div className="mt-1 text-sm text-gray-500">
+                    1-3 Days Express Shipping
+                  </div>
                 </div>
               </div>
             </div>

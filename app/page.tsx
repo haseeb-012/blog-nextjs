@@ -1,4 +1,6 @@
+import ArticleContent from "@/components/ArticaleContent";
 import ArticleIntro from "@/components/ArticleIntro";
+import AuthorSection from "@/components/AuthorSection";
 import DisclaimerSection from "@/components/DisclaimerSection";
 import HeroSection from "@/components/HeroSection";
 import ProductCard from "@/components/ProductCard";
@@ -13,11 +15,13 @@ export default function Home() {
         <ArticleIntro />
         <ProductCard />
         <ProductsCards />
-        <ProductCard1 />
         <ReviewStatistics />
-        <div className="mx-auto mt-8 max-w-7xl border px-4 text-lg font-bold text-gray-950 sm:text-2xl xl:px-0">
+        <div className="mx-auto mt-8 max-w-7xl px-4 text-lg font-bold text-gray-950 sm:text-2xl xl:px-0">
           <h1>Best Recommendation: Dr. RestRight Mouth Tape</h1>
         </div>
+        <ProductCard1 />
+        <ArticleContent />
+        <AuthorSection/>
         <DisclaimerSection />
         {/* 
         // footer */}
