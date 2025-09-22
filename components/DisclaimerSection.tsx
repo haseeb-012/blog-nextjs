@@ -2,7 +2,7 @@ import Image from "next/image";
 
 function DisclaimerSection() {
   return (
-    <div className="bg-[#E9E9E9] px-4 pt-8  md:px-8 md:py-6">
+    <div className="bg-[#E9E9E9] px-4 pt-8 md:px-8 md:py-6">
       <div className="mx-auto max-w-7xl">
         {/* Logo */}
         <div className="mb-6 md:mb-8">
@@ -30,7 +30,7 @@ function DisclaimerSection() {
             and publisher are not responsible for any misuse or misunderstanding
             of the information on this site, nor for any direct or indirect
             loss, damage, or injury that may result. The U.S. Food and Drug
-            Administration has not evaluated the statements on this site.
+            Administration (FDA) has not evaluated the statements on this site.
             Products and information discussed here are not intended to
             diagnose, treat, cure, or prevent any disease.
           </p>

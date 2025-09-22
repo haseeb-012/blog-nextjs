@@ -6,7 +6,7 @@ import HeroSection from "@/components/HeroSection";
 import ProductCard from "@/components/ProductCard";
 import ProductCard1 from "@/components/ProductCard1";
 import ProductsCards from "@/components/ProductsCards";
-import ReviewStatistics from "@/components/ReviewStatistics";
+import ReviewStatistics from "@/components/ReviewStatistics"
 export default function Home() {
   return (
     <>
@@ -16,12 +16,12 @@ export default function Home() {
         <ProductCard />
         <ProductsCards />
         <ReviewStatistics />
-        <div className="mx-auto mt-8 max-w-7xl px-4 text-lg font-bold text-gray-950 sm:text-2xl xl:px-0">
+        <div className="mx-auto mt-8 max-w-7xl px-4 text-lg font-bold text-gray-950 sm:text-2xl xl:px-2">
           <h1>Best Recommendation: Dr. RestRight Mouth Tape</h1>
         </div>
         <ProductCard1 />
         <ArticleContent />
-        <AuthorSection/>
+        <AuthorSection />
         <DisclaimerSection />
         {/* 
         // footer */}

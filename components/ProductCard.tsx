@@ -9,7 +9,7 @@ function ProductCard() {
     <div className="mx-auto w-full max-w-7xl px-4 py-8 xl:px-0">
       <div className="overflow-hidden bg-white shadow-lg">
         {/* Header Section with Banner and Discount */}
-        <div className="flex items-start justify-between p-4 md:p-0">
+        <div className="flex items-start justify-between p-4 md:p-0 ">
           <Banner text="#1 Mouth Tape" bgColor="bg-blue-500" />
 
           {/* Discount Banner - Hidden on mobile, visible on tablet+ */}

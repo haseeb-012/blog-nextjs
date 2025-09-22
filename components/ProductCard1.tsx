@@ -4,10 +4,10 @@ import ProductFeaturesList from "./CardComponents/ProductFeaturesList";
 
 function ProductCard() {
   return (
-    <div className="mx-auto w-full max-w-7xl px-4 py-8 xl:px-0">
+    <div className="mx-auto w-full max-w-7xl px-4 py-10 m-2 xl:px-0">
       <div className="overflow-hidden bg-white shadow-lg">
         {/* Header Section with Approved Badge and Discount */}
-        <div className="flex items-start justify-between px-4 py-4">
+        <div className="flex items-start justify-between px-4 ld:px-0 py-4">
           {/* Approved Badge */}
           <div className="relative md:pl-20">
             <Image

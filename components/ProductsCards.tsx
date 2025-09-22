@@ -7,7 +7,18 @@ const productsData = [
     features: [
       { text: "Breathable woven fabric with flexibility", isPositive: true },
       { text: "Comfortable fit during use", isPositive: true },
-      { text: "Advanced lip positioning", isPositive: true },
+      {
+        text: "Help guide lip placemeent",
+        isPositive: true,
+      },
+      {
+        text: "No more dry mouth, sore throat, or headaches",
+        isPositive: true,
+      },
+      {
+        text: "Doctor-farmulated,medical-grade,latex-free adhesive",
+        isPositive: true,
+      },
       {
         text: "Can trigger redness or breakouts from adhesive",
         isPositive: false,

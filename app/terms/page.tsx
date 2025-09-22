@@ -70,8 +70,9 @@ export default function TermsOfUsePage() {
             </h2>
             <div className="text-center text-sm leading-relaxed text-gray-700 md:text-base">
               <p>
-                The Site is intended for individuals 18 years of age or older.
-                If you are under 18, please do not use the Site.
+                The Site is intended for individuals
+                <strong> 16 years of age or older.</strong>
+                If you are under 16, please do not use the Site.
               </p>
             </div>
           </section>
